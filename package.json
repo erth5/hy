@@ -1,0 +1,28 @@
+{
+  "name": "web-template",
+  "version": "1.0.0",
+  "description": "a template to create web",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erth5/web-template.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erth5/web-template/issues"
+  },
+  "homepage": "https://github.com/erth5/web-template#readme",
+  "dependencies": {
+    "yarn": "^1.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  }
+}
