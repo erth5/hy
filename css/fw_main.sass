@@ -1,0 +1,16 @@
+html, body
+  &.light
+    --text: black
+    --background: #F0FFF0
+    --menu: black
+    --menubg: white
+  &.norm
+    --text: GhostWhite
+    --background: DimGrey
+    --menu: color.scale(GhostWhite, $lightness: -20%) //menu text
+    --menubg: color.scale(DimGrey, $lightness: 20%) //menu background
+  &.black
+    --text: white
+    --background: #333
+    --menu: white
+    --menubg: black

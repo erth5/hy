@@ -1,0 +1,68 @@
+//@import template
+//Harmonic color system
+$primary: red
+
+//complementary() is always implemented
+$comp: complement($primary)
+//$comp: adjust_hue($primary, 180%)
+
+//convert to greyscale() is always implemented
+$gs: desaturate($primary, 100%)
+
+//Triad symmetric
+$primary2: adjust_hue($primary, 120)
+$primary3: adjust_hue($primary, 240)
+
+//triad unsymmetrical
+$triad: adjust_hue($primary, 150)
+$triad-: adjust_hue($primary, -150)
+
+//Quad sym
+$sympathizer: adjust_hue($primary, 30)
+$sympathizer-: adjust_hue($primary, -30)
+$antisym: adjust_hue($primary, 150)
+$antisym-: adjust_hue($primary, -150)
+
+//Quad unsym (without primary)
+$usympathizer: adjust_hue($primary, 60)
+$usympathizer-: adjust_hue($primary, -60)
+$uantisym1: adjust_hue($primary, 150)
+$uantisym-: adjust_hue($primary, -150)
+
+//Quinte unsym
+$quintsympathizer: adjust_hue($primary, 120)
+$quintsympathizer-: adjust_hue($primary, -120)
+$quintantisym: adjust_hue($primary, 150)
+$quintantisym-: adjust_hue($primary, -150)
+
+//sexte sym = complementary + quinte
+
+
+//second color
+$secondary: green
+
+//Triad symmetric
+$secondary2: adjust_hue($secondary, 120)
+$secondary3: adjust_hue($secondary, 240)
+
+//triad unsymmetrical
+$triad0: adjust_hue($secondary, 150)
+$triad0-: adjust_hue($secondary, -150)
+
+//Quad sym
+$sympathizer0: adjust_hue($secondary, 30)
+$sympathizer0-: adjust_hue($secondary, -30)
+$antisym0: adjust_hue($secondary, 150)
+$antisym0-: adjust_hue($secondary, -150)
+
+//Quad unsym (without primary
+$usympathizer0: adjust_hue($secondary, 60)
+$usympathizer0-: adjust_hue($secondary, -60)
+$uantisym10: adjust_hue($secondary, 150)
+$uantisym0-: adjust_hue($secondary, -150)
+
+//Quinte unsym
+$quintsympathizer0: adjust_hue($secondary, 120)
+$quintsympathizer0-: adjust_hue($secondary, -120)
+$quintantisym0: adjust_hue($secondary, 150)
+$quintantisym0-: adjust_hue($secondary, -150)

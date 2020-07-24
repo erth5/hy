@@ -1,0 +1,11 @@
+# list of excluded components
+this list will be given to projects:
+
+wp
+
+angular, react, vue
+
+
+
+## community environment
+- https://github.com/github/super-linter
