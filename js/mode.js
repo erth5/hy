@@ -16,7 +16,7 @@ const setClassToBody = () => {
         $f('body').classList.add('dark');
     } else {
         $f('body').classList.remove('norm');
-        $f('body').classList.remove('light');
+        $f('body').classList.remove('dark');
         $f('body').classList.add('light');
     }
 };
