@@ -3,7 +3,6 @@
 let mode = "norm";
 const SWITCH = document.getElementById('mode');
 DARKMODE = window.matchMedia('(prefers-color-scheme: dark)').matches;
-console.log("dark mode");
 
 const switchMode = () => {
     DARKMODE = !DARKMODE;
@@ -12,15 +11,17 @@ const switchMode = () => {
 
 const setClassToBody = () => {
     if (DARKMODE) {
-        BODY.classList.remove('light');
-        BODY.classList.remove('dark');
+        $f('body').classList.remove('norm');
+        $f('body').classList.remove('light');
+        $f('body').classList.add('dark');
     } else {
-        BODY.classList.remove('dark');
-        BODY.classList.remove('light');
+        $f('body').classList.remove('norm');
+        $f('body').classList.remove('light');
+        $f('body').classList.add('light');
     }
 };
 
-BUTTON.addEventListener('click', switchMode);
+SWITCH.addEventListener('click', switchMode);
 setClassToBody();
 
-console.log(DARKMODE);
+console.log("DARKMODE: " + DARKMODE);
