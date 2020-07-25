@@ -15,19 +15,44 @@ body, html
     align-items: center
 
 header
+    position: fixed
+    top: 0
+
     display: flex
-    color: red
-    background-color: black
+    color: var(--menu)
+    background: var(--menubg)
     overflow: hidden
-    font-size: 200%
 
-li
-    float: left
-    a
-        color: var(--text)
-    a:hover
-        color: red
-
+    nav#main
+        color: var(--menu)
+        display: inline-block
+        ul
+            margin: 0
+            padding: 0
+            transition: all 300ms
+            li
+                margin: 0
+                padding: 0
+                float: left
+                list-style: none
+                position: relative
+                transition: all 300ms
+                a
+                    display: inline-block
+                    padding: 2.17rem
+                    float: left
+                    min-width: 12rem
+                    text-align: center
+                    font-size: 2rem
+                    color: #fff
+                    margin: 0 1px 0 0
+                    text-decoration: none
+                    background: #ff6e48
+                    font-weight: 300
+                    transition: all 300ms
+                    font-family: "open sans",serif
+            li:hover > a
+                background: #d85d3c
 
 *
     box-sizing: border-box
