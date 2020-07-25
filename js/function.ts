@@ -9,6 +9,4 @@ let $ = function (object) {
 let $f = function (object) {
     return document.querySelector(object);
 };
-let reta = "function.js success";
-console.log(reta);
-
+console.log("function.js ready");
