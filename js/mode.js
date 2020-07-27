@@ -12,7 +12,7 @@ const setInitClassToBody = () => {
         $f('body').classList.add('light');
         console.log("automatic light")
     }
-};setInitClassToBody()
+}//;setInitClassToBody()
 
 const setClassToBody = (MODE) => {
     if (MODE === "light") {
