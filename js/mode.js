@@ -12,7 +12,7 @@ const setInitClassToBody = () => {
         $f('body').classList.add('light');
         console.log("automatic light")
     }
-}//;setInitClassToBody()
+};setInitClassToBody()
 
 const setClassToBody = (MODE) => {
     if (MODE === "light") {
@@ -36,10 +36,8 @@ const setClassToBody = (MODE) => {
 }
 
 LIGHT = document.getElementById('light')
-LIGHT.addEventListener('click', () => setClassToBody("light"))
-//console.log(LIGHT)
-
-//$f('#norm').addEventListener('click', () => setClassToBody("norm"));
-//$f('#dark').addEventListener('click', setClassToBody("dark"));
+LIGHT.addEventListener('mouseenter', () => setClassToBody("light"))
+$f('#norm').addEventListener('mouseenter', () => setClassToBody("norm"));
+$f('#dark').addEventListener('mouseenter', () => setClassToBody("dark"));
 
 console.log("DARKMODE: " + DARKMODE);

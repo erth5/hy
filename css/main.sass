@@ -5,64 +5,78 @@
 //@import 'reset.css'
 @import 'fw_main'
 
+@mixin reset
+    margin: 0
+    padding: 0
+    list-style: none
+    text-decoration: none
+
 body, html
-    font-family: 'Roboto', serif
-    font-size: 62.5%
-    width: 100%
-    height: 100%
+    font-family: 'open sans', serif
+    font-size: 100%
     color: var(--text)
-    background-color: var(--background)
+    background: var(--background)
+p
+    font-size: 2rem
+h1
+    font-size: 7rem
+h2
+    font-size: 6rem
+h3
+    font-size: 5rem
+h4
+    font-size: 4rem
+h5
+    font-size: 3rem
+h6
+    font-size: 2.5rem
 
-header
-    background: var(--menubg)
-    width: 100%
+
+.topnav
     position: fixed
-    top: 0
-    text-align: right
-    transition: 200ms all
-    height: 7rem
-    nav#main
+    overflow: hidden
+    a
+        @include reset
+        float: left
+        text-align: center
+        padding: 14px 16px
+        font-size: 2rem
+        background: var(--menubg)
         color: var(--menu)
-        display: inline-block
-        ul
-            margin: 0
-            padding: 0
-            transition: all 300ms
-            display: inline-block
-            li
-                margin: 0
-                padding: 0
-                float: left
-                list-style: none
-                position: relative
-                transition: all 300ms
-                &:hover > ul
-                    max-height: 70rem
-                a
-                    text-decoration: none
-                    display: inline-block
-                    float: left
-                    min-width: 10rem
-                    text-align: center
-                    color: #F0FFF0
-                    margin: 0
-                    padding: 2.17rem
-                    background: red
-                    font-weight: 300
-                    font-size: 2rem
-                    transition: all 300ms
-                    font-family: "open sans", serif
-                    &:hover
-                        background: aqua
-                ul
-                    overflow: hidden
-                    position: absolute
-                    top: 100%
-                    left: 0
-                    width: 100%
-                    transition: 200ms all
-                    max-height: 0
+        &hover
+            color: #FF6E48
+        &active
+            color: aqua
+    .centered
+       a
+            float: none
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background: #9E1030
+.right
+    float: right
+//mobile
+@media screen and (max-width: 600px)
+    .topnav a, .topnav-right
+        float: none
+        display: block
+    .topnav-centered a
+        position: relative
+        top: 0
+        left: 0
+        transform: none
 
+    //tools
+.highlighter
+    background-color: yellow
+.fat
+    font-weight: bold
+//alignment
+.theme
+    max-width: 1rem
+    background: #9E1030
 
 
 *
