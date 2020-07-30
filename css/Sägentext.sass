@@ -1,0 +1,112 @@
+$color-dark: #081826
+$color-light: #163D61
+
+
+body
+  font-family: sans-serif
+  font-weight: 700
+  height: 100vh
+  width: 100vw
+.parent-div
+  display: flex
+  flex-direction: column
+  gap: 1em
+  width: 100vw
+  height: 100vh
+  justify-content: center
+  align-items: center
+  background: $color-dark
+h2
+  font-size: 1.5em
+  color: #fafafa
+.banner
+  display: flex
+  width: 60%
+  height: 200px
+  background: $color-dark
+  position: relative
+  border: 5px solid #fafafa
+  .content
+    position: absolute
+    top: 0
+    left: 50%
+    display: flex
+    z-index: 1
+    align-items: center
+    justify-content: space-between
+    width: 96%
+    height: 100%
+    transform: translateX(-50%)
+  .slanted
+    width: 60%
+    height: 100%
+    background: rgba(255, 255, 255, 0.7)
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%)
+    position: relative
+    .slanted2
+      width: 95%
+      height: 100%
+      background: $color-light
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%)
+
+.content-left, .content-right
+  display: flex
+  align-items: center
+.content-left
+.circle
+  width: 4em
+  height: 4em
+  background: #2e2e2e
+  border-radius: 50%
+  margin-right: 8px
+
+.arrow
+  height: 1.5em
+  margin-left: 5px
+
+.animation
+  cursor: pointer
+//padding-right: 50px
+.animation:hover + .arrow
+  //color: blue
+  animation-name: arrowSlide
+  animation-duration: 1.2s
+  animation-iteration-count: infinite
+  animation-timing-function: ease
+  transition: all ease
+
+@keyframes arrowSlide
+  from
+    opacity: 0
+    transform: translateX(0)
+  20%
+    opacity: 1
+    transform: translateX(8px)
+  to
+    opacity: 1
+    transform: translateX(8px)
+
+.slide-in
+  animation: slantSlide1 0.8s ease
+.slide-in2
+  animation: slantSlide2 0.8s ease
+
+.slide-out
+  background: linear-gradient(to right, #6a3093, #a044ff)
+.banner2
+  background: linear-gradient(to right, #6a3093, #a044ff)
+  &:hover .slide-out
+    transition: all ease 0.4s
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%)
+
+
+@keyframes slantSlide1
+  from
+    width: 0
+  to
+    width: 60%
+@keyframes slantSlide2
+  from
+    width: 0
+  to
+    width: 95%

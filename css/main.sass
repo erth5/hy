@@ -1,9 +1,9 @@
 // ###############################################
 // ###############################################
-// START Boilerplate (not Important for the Tutorial)
 
 //@import 'reset.css'
 @import 'fw_main'
+@import 'Sägentext'
 
 @mixin reset
     margin: 0
@@ -16,46 +16,32 @@ body, html
     font-size: 100%
     color: var(--text)
     background: var(--background)
-p
-    font-size: 2rem
-h1
-    font-size: 7rem
-h2
-    font-size: 6rem
-h3
-    font-size: 5rem
-h4
-    font-size: 4rem
-h5
-    font-size: 3rem
-h6
-    font-size: 2.5rem
-
-
+    @include reset
+//navigation
 .topnav
-    position: fixed
+    position: sticky
+    top: 0
     overflow: hidden
+    background: var(--menuFG)
+
     a
         @include reset
         float: left
         text-align: center
-        padding: 14px 16px
+        padding: 10px 10px
         font-size: 2rem
-        background: var(--menubg)
-        color: var(--menu)
-        &hover
-            color: #FF6E48
-        &active
-            color: aqua
-    .centered
-       a
-            float: none
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
-            background: #9E1030
-.right
+        background: var(--menuBG)
+        color: var(--menu_txt)
+        &:hover
+            background-color: var(--hover)
+.topnav-centered
+    a
+        float: none
+        position: absolute
+        top: 0
+        left: 50%
+        background: var(--menuBG)
+.topnav-right
     float: right
 //mobile
 @media screen and (max-width: 600px)
@@ -67,7 +53,17 @@ h6
         top: 0
         left: 0
         transform: none
+//theme
+#light
+    background: aliceblue
+    color: aliceblue
 
+#norm
+    background: slategrey
+    color: slategrey
+#dark
+    background: black
+    color: black
     //tools
 .highlighter
     background-color: yellow
@@ -75,13 +71,10 @@ h6
     font-weight: bold
 //alignment
 .theme
-    max-width: 1rem
-    background: #9E1030
-
-
 *
     box-sizing: border-box
-
-// END Boilerplate (not Important for the Tutorial)
+    transition: 250ms all ease-in-out
+a.active
+    background-color: var(--active)
 // ###############################################
 // ###############################################
