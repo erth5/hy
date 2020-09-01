@@ -1,4 +1,8 @@
-//https://www.youtube.com/watch?v=E_dBqPP9MxI
+/*
+https://www.youtube.com/watch?v=E_dBqPP9MxI
+Wirkungsbereich: alle Seiten
+Speicherung:
+*/
 DARKMODE = window.matchMedia('(prefers-color-scheme: dark)').matches;
 let MODE = "norm";
 
