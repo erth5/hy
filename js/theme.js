@@ -1,20 +1,23 @@
 //https://www.youtube.com/watch?v=E_dBqPP9MxI
 DARKMODE = window.matchMedia('(prefers-color-scheme: dark)').matches;
+let MODE = "norm";
 
 const setInitClassToBody = () => {
     if (DARKMODE) {
         $f('body').classList.remove('norm');
         $f('body').classList.add('dark');
+        MODE = "dark";
         console.log("automatic dark")
     }
     if (!DARKMODE) {
         $f('body').classList.remove('norm');
         $f('body').classList.add('light');
+        MODE = "light";
         console.log("automatic light")
     }
 };setInitClassToBody()
 
-const setClassToBody = (MODE) => {
+const setClassToBody = () => {
     if (MODE === "light") {
         $f('body').classList.remove('dark')
         $f('body').classList.remove('norm')
@@ -36,8 +39,8 @@ const setClassToBody = (MODE) => {
 }
 
 LIGHT = document.getElementById('light')
-LIGHT.addEventListener('mouseenter', () => setClassToBody("light"))
-$f('#norm').addEventListener('mouseenter', () => setClassToBody("norm"));
-$f('#dark').addEventListener('mouseenter', () => setClassToBody("dark"));
+LIGHT.addEventListener('mouseenter', () => MODE = "light" & setClassToBody());
+$f('#norm').addEventListener('mouseenter', () => MODE = "norm" & setClassToBody());
+$f('#dark').addEventListener('mouseenter', () => MODE = "dark" & setClassToBody());
 
 console.log("DARKMODE: " + DARKMODE);
