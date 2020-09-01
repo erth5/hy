@@ -57,13 +57,13 @@ body, html
 #light
     background: aliceblue
     color: aliceblue
-
 #norm
     background: slategrey
     color: slategrey
 #dark
     background: black
     color: black
+
     //tools
 .highlighter
     background-color: yellow
@@ -78,9 +78,17 @@ a.active
     background-color: var(--active)
 
 .triangle-up-right
-    width: 0
-    height: 0
-    border-top: 50px solid rgb(246, 156, 85)
-    border-left: 50px solid transparent
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%)
+    height: 4rem
+    width: 4rem
+    background: var(--text)
+    position: fixed
+    right: 0
+    top: 0
+    float: right
+    &:hover
+        border-top: 4rem solid rgb(50, 50, 50)
+
+
 // ###############################################
 // ###############################################
