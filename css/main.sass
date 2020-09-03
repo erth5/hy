@@ -23,7 +23,6 @@ body, html
     top: 0
     overflow: hidden
     background: var(--menuFG)
-
     a
         @include reset
         float: left
@@ -32,6 +31,8 @@ body, html
         font-size: 2rem
         background: var(--menuBG)
         color: var(--menu_txt)
+        border-right: 0px solid var(--hover)
+        border-radius: 0px
         &:hover
             background-color: var(--hover)
 .topnav-centered
@@ -43,6 +44,10 @@ body, html
         background: var(--menuBG)
 .topnav-right
     float: right
+    a
+        &:hover
+            background-color: #fff
+
 //mobile
 @media screen and (max-width: 600px)
     .topnav a, .topnav-right
