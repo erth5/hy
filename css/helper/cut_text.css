@@ -1,0 +1,24 @@
+.cuttet-skew {
+  text-transform: uppercase;
+  position: relative;
+  transition: all 250ms;
+}
+.cuttet-skew span {
+  opacity: 0;
+}
+.cuttet-skew span.top, .cuttet-skew span.bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: all 250ms;
+  z-index: 5;
+}
+.cuttet-skew span.top {
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 60%);
+}
+.cuttet-skew span.bottom {
+  clip-path: polygon(0 60%, 100% 40%, 100% 100%, 0 100%);
+}
+
+/*# sourceMappingURL=cut_text.css.map */

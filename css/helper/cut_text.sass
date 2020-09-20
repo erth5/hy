@@ -1,0 +1,78 @@
+$pointA: 60%
+$pointB: 40%
+
+.cuttet-skew
+  text-transform: uppercase
+  margin-left: 5rem
+  position: relative
+  transition: all 250ms
+  span
+    opacity: 0
+  span.top, span.bottom
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 1
+    transition: all 250ms
+    z-index: 5
+  span.top
+    clip-path: polygon(0 0, 100% 0, 100% $pointB, 0 $pointA)
+  span.bottom
+    clip-path: polygon(0 $pointA, 100% $pointB, 100% 100%, 0 100%)
+  &:hover
+    transform: rotate(-5deg)
+    span.top
+      transform: translate(-10%, -5%)
+    span.bottom
+      transform: translate(10%, 5%)
+
+.cuttet-skew-l
+  text-transform: uppercase
+  margin-left: 5rem
+  position: relative
+  transition: all 250ms
+  span
+    opacity: 0
+  span.top, span.bottom
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 1
+    transition: all 250ms
+    z-index: 5
+  span.top
+    clip-path: polygon(0 0, 100% 0, 100% $pointB, 0 $pointA)
+  span.bottom
+    clip-path: polygon(0 $pointA, 100% $pointB, 100% 100%, 0 100%)
+  &:hover
+    transform: rotate(5deg)
+    span.top
+      transform: translate(-10%, -5%)
+    span.bottom
+      transform: translate(10%, 5%)
+
+
+.cuttet
+  text-transform: uppercase
+  margin-left: 5rem
+  position: relative
+  transition: all 250ms
+  span
+    opacity: 0
+  span.top, span.bottom
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 1
+    transition: all 250ms
+    z-index: 5
+  span.top
+    clip-path: polygon(0 0, 100% 0, 100% $pointB, 0 $pointA)
+  span.bottom
+    clip-path: polygon(0 $pointA, 100% $pointB, 100% 100%, 0 100%)
+  &:hover
+    transform: rotate(0deg)
+    span.top
+      transform: translate(-10%, -5%)
+    span.bottom
+      transform: translate(10%, 5%)

@@ -23,3 +23,4 @@ DARKMODE = window.matchMedia('(prefers-color-scheme: dark)').matches;
 input.addEventListener('click', switchMode);
 setClassToBody();
 
+console.log("JS: darkmode finish")

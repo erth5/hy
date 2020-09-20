@@ -9,4 +9,4 @@ let $ = function (object) {
 let $f = function (object) {
     return document.querySelector(object);
 };
-console.log("function.js ready");
+console.log("JS: function.js ready");
