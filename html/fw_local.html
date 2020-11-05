@@ -5,6 +5,7 @@
     <title>fw_local</title>
 
 
+
 </head>
 <body>
 
@@ -17,6 +18,65 @@
 <script src="../js/function.js"></script>
 <script src="../js/darkmode.js"></script>
 -->
+
+
+<!-- eigenes framework zu colors -->
+<!-- CSS, SASS pre Import -->
+<link rel="stylesheet" href="../css/fw/local.css">
+
+<div class="grid-d">
+    <div style="background-color:Tomato;">Tomato</div>
+    <div style="background-color:Orange;">Orange</div>
+    <div style="background-color:DodgerBlue;">DodgerBlue</div>
+    <div style="background-color:MediumSeaGreen;">MediumSeaGreen</div>
+    <div style="background-color:Gray;">Gray</div>
+    <div style="background-color:SlateBlue;">SlateBlue</div>
+    <div style="background-color:Violet;">Violet</div>
+    <div style="background-color:LightGray;">LightGray</div>
+</div>
+
+<div class="grid">
+    <div class="primary">primary</div>
+    <div class="complement">complement</div>
+    <div id="desaturate">graustufen</div>
+
+    <div class="grid primary">Triadic</div>
+    <div class="grid-2">
+        <div id="primary2"> 120° symetric part 1</div>
+        <div id="primary3">-120° symetric part 2</div>
+    </div>
+    <div class="grid-2">
+        <div id="triad"> 150° unsymetrischer Gegenspieler1</div>
+        <div id="triad-">-150° unsymetrischer Gegenspieler2</div>
+    </div>
+
+    <div class="grid primary">Quad</div>
+    <div class="grid-4">
+        <div id="symp"> 30°</div>
+        <div id="symp-">-30°</div>
+        <div id="ansymp"> 150°</div>
+        <div id="ansymp-">-150°</div>
+    </div>
+
+    <div class="grid-4">
+        <div id="usymp"> 60°</div>
+        <div id="usymp-">-60°</div>
+        <div id="uant"> 150°</div>
+        <div id="uant-">-150°</div>
+    </div>
+
+    <div class="grid-4">
+        <div id="qui"> 120°</div>
+        <div id="qui-">-120°</div>
+        <div id="aqui"> 150°</div>
+        <div id="aqui-">-150°</div>
+    </div>
+
+    <div class="grid primary">Quint</div>
+    <div class="grid-5">
+        <div class="complement">complement</div>
+    </div>
+</div>
 
 <script src="../js/webGL_fluid_sim.js"></script>
 <script src="../js/textlength_to_form.js"></script>
