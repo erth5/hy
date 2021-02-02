@@ -62,26 +62,44 @@
 
 <div class="repair_container"></div>
 
-<form action="/action_page.php">
-    <label for="bday">set birthday: dd.mm.yyyy</label> <blockquote></blockquote>
-    <input type="text" id="bday" name="setday"><br><br> <blockquote></blockquote>
-    <label for="18day">You get 18 at</label> <blockquote></blockquote>
-    <output type="text" id="18day" name="getday">no result</output> <blockquote></blockquote>
+<form>
+    <label for="bday">set birthday: yyyy</label>
+    <blockquote></blockquote>
+    birthday: <input type="number" maxlength="6"
+                     id="bday" name="setday"
+                     onchange="calc_bday(value)">
+    <blockquote></blockquote>
+    <label for="18day">You get 18 at</label>
+    <blockquote></blockquote>
+    <output id="18day" name="getday">date to get 18: no result</output>
+    <blockquote></blockquote>
+    <label for="current_age">Your age is</label>
+    <blockquote></blockquote>
+    <output id="current_age" name="getage">current age: no result</output>
+    <blockquote></blockquote>
 </form>
 
 
 <div class="repair_container"></div>
 
+<!-- favicon geht normal mit media quera zu verwenden -->
+<link rel="icon" href="./assets/svg/darkmode_fav.svg" type="image/svg+xml">
+
+<!-- Grafiken können per id angesteuert werden (sass var können verwendet werden) -->
+<object data="assets/svg/darkmode_logo.svg" type="image/svg+xml"></object>
+
+
 
 </body>
 
-<!-- JS post Import def
+<!-- JS post Import def  -->
 <script src="../js/function.js"></script>
 <script src="../js/darkmode.js"></script>
- -->
+
 <!-- JS post Import for site -->
 <script src="../js/textlength_to_form.js"></script>
 <script src="../js/animated_skillbar.js"></script>
+<script src="../js/birthday_calc.js"></script>
 <!-- -->
 
 </html>

@@ -1,5 +1,6 @@
 
 let DARKMODE = false;
+DARKMODE = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const input = document.getElementById('switch');
 
 const switchMode = () => {
@@ -17,8 +18,6 @@ const setClassToBody = () => {
     }
     console.log("darkmode = " + DARKMODE)
 }
-
-DARKMODE = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 input.addEventListener('click', switchMode);
 setClassToBody();
