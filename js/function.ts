@@ -1,5 +1,5 @@
 /*own jQuery selector
-  $ as selector over all
+  $a as selector over all
   $f as selector to select first element
  */
 
