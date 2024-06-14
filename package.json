@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/erth5/web-template#readme",
   "dependencies": {
-    "yarn": "^1.22.10"
+    "yarn": "^1.22.13"
   },
   "devDependencies": {
     "typescript": "^3.9.7"
